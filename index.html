@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio personal Wahyu Saofi, lulusan TI yang tertarik pada web development, aplikasi mobile, UI/UX, dan Internet of Things.">
+  <meta name="theme-color" content="#070708">
+  <title>Wahyu Saofi — Portfolio</title>
+
+  <!-- Font: Anton (judul), Plus Jakarta Sans (isi), Reenie Beanie (tulisan tangan) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Untuk mengganti gambar, timpa file di folder images/ dengan gambar sendiri dan gunakan nama file yang sama. -->
+  <!-- Foto profil: simpan PNG berlatar transparan sebagai images/foto-wahyu.png -->
+</head>
+<body>
+
+  <!-- Kumpulan ikon (dipakai lewat <use>), tanpa library tambahan -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+      <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 13c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 15c0-3 2.5-5 6-5 0 3-2.5 5-6 5z"/></symbol>
+      <symbol id="i-syringe" viewBox="0 0 24 24"><path d="M18 3l3 3M15 6l3 3M19 8l-9 9-4 1 1-4 9-9M8 16l-4 4M12 9l3 3"/></symbol>
+      <symbol id="i-id-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16c.5-1.5 2-2 3.5-2s3 .5 3.500 2M15 10h4M15 14h3"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v2H9zM12 10v6M9 13h6"/></symbol>
+      <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M6 3v6a4 4 0 0 0 8 0V3M4.5 3H8M12 3h3.500M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <div class="nav-left">
+        <a class="brand" href="#home" aria-label="Wahyu Saofi, halaman utama">WS<span>.</span></a>
+        <span class="nav-sep">|</span>
+        <span class="nav-tag">IT DEVELOPER &amp; UI/UX CREATOR</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#home">UTAMA</a>
+        <a href="#tentang">TENTANG</a>
+        <a href="#proyek">PROYEK</a>
+        <a href="#keahlian">PENDIDIKAN &amp; KEAHLIAN</a>
+        <a href="#kontak">KONTAK</a>
+      </div>
+
+      <div class="nav-status">
+        <span class="ping" aria-hidden="true"></span>
+        <span>TERBUKA UNTUK PROYEK</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"><span>PORTFOLIO</span></div>
+
+      <div class="hero-grid">
+        <!-- Kiri: perkenalan -->
+        <div class="hero-copy">
+          <div class="hello">Hello, I'm</div>
+
+          <div>
+            <h1 class="hero-title">WAHYU<br><span>SAOFI</span></h1>
+            <p class="hero-role">IT Developer · UI/UX Enthusiast</p>
+          </div>
+
+          <p class="hero-lead">Saya tertarik pada pengembangan web, aplikasi mobile, UI/UX, serta Internet of Things. Saya senang membangun solusi digital yang menggabungkan desain, pemrograman, dan pemecahan masalah.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyek"><span>Lihat proyek saya</span><svg class="ic"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn-outline" href="#kontak"><span>Hubungi saya</span></a>
+          </div>
+
+          <div class="hero-meta">
+            <svg class="ic"><use href="#i-globe"/></svg>
+            <span>Portfolio Lulusan TI</span>
+          </div>
+        </div>
+
+        <!-- Kanan: kartu profil + statistik -->
+        <div class="hero-side" aria-label="Ringkasan profil">
+          <div class="showcase">
+            <!-- Foto kini ada di kartu lanyard 3D (lapisan #lanyard di bawah halaman) -->
+            <div class="showcase-photo" aria-hidden="true"></div>
+
+            <div class="showcase-info">
+              <span class="chip">LULUSAN TEKNOLOGI INFORMASI</span>
+              <h3>REKAP KARYA 2026</h3>
+              <p>Berfokus pada pengembangan aplikasi dan sistem berbasis teknologi, dari perancangan antarmuka hingga implementasi backend dan pengolahan data.</p>
+            </div>
+
+            <div class="showcase-facts">
+              <div class="fact"><strong>WEB</strong><small>Frontend &amp; Backend</small></div>
+              <div class="fact"><strong>MOBILE</strong><small>Expo / React Native</small></div>
+              <div class="fact"><strong>IOT</strong><small>ESP32-CAM &amp; Raspberry Pi</small></div>
+              <div class="fact"><strong>UI/UX</strong><small>Figma</small></div>
+            </div>
+          </div>
+
+          <div class="stats" aria-label="Statistik ringkas">
+            <div class="stat"><strong data-count="5">05</strong><span>Proyek Dikerjakan</span></div>
+            <div class="stat stat-hot"><strong data-count="4">04</strong><span>Tahun Studi IT</span></div>
+            <div class="stat"><strong data-count="7">07</strong><span>Kelompok Keahlian</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TENTANG ===================== -->
+    <section class="section" id="tentang">
+      <div class="sec-head" data-animate=".kicker, .sec-title, .sec-desc">
+        <div>
+          <span class="kicker">01 / Tentang saya</span>
+          <h2 class="sec-title">Menghubungkan ide<br>dan teknologi.</h2>
+        </div>
+        <p class="sec-desc">Saya terus mengembangkan kemampuan melalui proyek akademik dan proyek mandiri, dengan perhatian pada kegunaan, struktur sistem, dan pengalaman pengguna.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PROYEK ===================== -->
+    <section class="section" id="proyek">
+      <div class="sec-head" data-animate=".kicker, .sec-title, .sec-desc">
+        <div>
+          <span class="kicker">02 / Pilihan karya</span>
+          <h2 class="sec-title">Proyek yang saya kerjakan.</h2>
+        </div>
+        <p class="sec-desc">Beberapa pengalaman proyek yang merepresentasikan minat dan keterampilan saya.</p>
+      </div>
+
+      <div class="proj-grid" data-animate=".project-card" data-stagger="120">
+        <!-- Proyek 1 -->
+        <article class="project-card">
+          <div class="thumb thumb-green">
+            <div class="thumb-fallback">
+              <svg class="ic"><use href="#i-sprout"/></svg>
+              <span>IoT &amp; Image Processing</span>
+            </div>
+            <img class="thumb-img" src="images/proyek-iot.jpg" alt="Ilustrasi proyek pemantauan kecambah berbasis IoT" loading="lazy" onerror="this.style.display='none'">
+            <div class="badge-num" aria-hidden="true">01</div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <h3 class="proj-title">Sistem Pemantauan Kecambah Berbasis IoT</h3>
+              <p class="proj-text">Mengembangkan sistem pengukuran pertumbuhan kecambah otomatis menggunakan ESP32-CAM dan Raspberry Pi, serta menerapkan metode Region Growing untuk pengolahan citra.</p>
+            </div>
+            <div class="proj-tags"><span>Python</span><span>ESP32-CAM</span><span>Raspberry Pi</span><span>OpenCV</span><span>Region Growing</span></div>
+          </div>
+        </article>
+
+        <!-- Proyek 2 -->
+        <article class="project-card">
+          <div class="thumb thumb-red">
+            <div class="thumb-fallback">
+              <svg class="ic"><use href="#i-syringe"/></svg>
+              <span>Android Application</span>
+            </div>
+            <img class="thumb-img" src="images/proyek-insulin-care.jpg" alt="Ilustrasi proyek aplikasi Insulin Care" loading="lazy" onerror="this.style.display='none'">
+            <div class="badge-num" aria-hidden="true">02</div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <h3 class="proj-title">Insulin Care — Aplikasi Android</h3>
+              <p class="proj-text">Merancang UI/UX dan mengembangkan aplikasi Android menggunakan Expo.</p>
+            </div>
+            <div class="proj-tags"><span>Expo</span><span>Android</span><span>UI/UX</span></div>
+          </div>
+        </article>
+
+        <!-- Proyek 3 -->
+        <article class="project-card">
+          <div class="thumb thumb-blue">
+            <div class="thumb-fallback">
+              <svg class="ic"><use href="#i-id-card"/></svg>
+              <span>Fullstack Web &amp; Vision</span>
+            </div>
+            <img class="thumb-img" src="images/proyek-presensi-wajah.jpg" alt="Ilustrasi proyek presensi pengenalan wajah" loading="lazy" onerror="this.style.display='none'">
+            <div class="badge-num" aria-hidden="true">03</div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <h3 class="proj-title">Sistem Presensi Pengenalan Wajah</h3>
+              <p class="proj-text">Mengembangkan website presensi sebagai bagian dari proyek tim, mulai dari desain UI/UX hingga pengembangan backend dan pengelolaan basis data.</p>
+            </div>
+            <div class="proj-tags"><span>UI/UX</span><span>Frontend</span><span>Backend</span><span>Database</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="proj-row" data-animate=".mini-card" data-stagger="120">
+        <!-- Proyek 4 -->
+        <article class="mini-card">
+          <div class="mini-info">
+            <div class="mini-head">
+              <span class="mini-num">04</span>
+              <h3 class="mini-title">Rekam Medis — Laravel</h3>
+            </div>
+            <p class="proj-text">Membuat desain proyek rekam medis dan mengembangkan sistem menggunakan framework Laravel.</p>
+            <div class="mini-tags"><span>PHP</span><span>Laravel</span><span>Web Development</span></div>
+          </div>
+          <div class="mini-thumb">
+            <svg class="ic"><use href="#i-clipboard"/></svg>
+            <img src="images/proyek-rekam-medis.jpg" alt="Ilustrasi proyek rekam medis Laravel" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </article>
+
+        <!-- Proyek 5 -->
+        <article class="mini-card">
+          <div class="mini-info">
+            <div class="mini-head">
+              <span class="mini-num">05</span>
+              <h3 class="mini-title">MEJO (Medical Journey)</h3>
+            </div>
+            <p class="proj-text">Membuat desain situs web MEJO dan mengembangkan proyek dari tahap UI/UX hingga menjadi situs web yang berfungsi.</p>
+            <div class="mini-tags"><span>UI/UX</span><span>Web Development</span><span>Figma</span></div>
+          </div>
+          <div class="mini-thumb">
+            <svg class="ic"><use href="#i-stethoscope"/></svg>
+            <img src="images/proyek-mejo.jpg" alt="Ilustrasi proyek MEJO Medical Journey" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== PENDIDIKAN · KEAHLIAN · ALUR KERJA · KUTIPAN ===================== -->
+    <section class="section" id="keahlian">
+      <div class="sec-head" data-animate=".kicker, .sec-title, .sec-desc">
+        <div>
+          <span class="kicker">03 / Keahlian</span>
+          <h2 class="sec-title">Teknologi yang saya gunakan.</h2>
+        </div>
+      </div>
+
+      <div class="trio" data-animate data-stagger="140">
+        <!-- Kolom 1 -->
+        <div class="box box-skills">
+          <h3 class="box-title"><span>//</span> EDUCATION &amp; KEAHLIAN</h3>
+
+          <div class="edu">
+            <span class="label">PENDIDIKAN</span>
+            <div class="edu-item">
+              <div class="edu-row">
+                <h4>S1 Teknologi Informasi</h4>
+                <span class="edu-year">2022 — 2026</span>
+              </div>
+              <p>Universitas 'Aisyiyah Yogyakarta</p>
+            </div>
+          </div>
+
+          <div class="skills" data-animate=".skill-group" data-distance="30" data-stagger="60">
+            <span class="label">TECH STACK &amp; SKILLS</span>
+
+            <div class="skill-group">
+              <h4>Pemrograman</h4>
+              <div class="pills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span class="hot">Python</span><span>PHP</span><span>Java</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Web Development</h4>
+              <div class="pills"><span>Frontend dan Backend</span><span class="hot">Laravel</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>UI/UX Design</h4>
+              <div class="pills"><span class="hot">Figma</span><span>Canva</span><span>Perancangan antarmuka</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Mobile Development</h4>
+              <div class="pills"><span class="hot">Expo</span><span>Pengembangan aplikasi Android</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Database</h4>
+              <div class="pills"><span>MySQL</span><span>SQLite</span><span>MySQL Workbench</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Internet of Things (IoT)</h4>
+              <div class="pills"><span class="hot">ESP32-CAM</span><span class="hot">Raspberry Pi</span><span>Integrasi perangkat dan sistem</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Image Processing</h4>
+              <div class="pills"><span>OpenCV</span><span>Segmentasi citra</span><span>Metode Region Growing</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="box box-process">
+          <h3 class="box-title"><span>//</span> WORK PROCESS</h3>
+          <ol class="process" data-animate="li" data-distance="40" data-stagger="100">
+            <li>
+              <span class="step-no">01</span>
+              <div><h4>DISCOVER</h4><p>Memahami kebutuhan sistem, audiens pengguna, dan analisis masalah awal.</p></div>
+            </li>
+            <li>
+              <span class="step-no">02</span>
+              <div><h4>IDEATE</h4><p>Perancangan arsitektur data, alur pengguna, dan wireframe di Figma.</p></div>
+            </li>
+            <li>
+              <span class="step-no">03</span>
+              <div><h4>DESIGN</h4><p>Penyusunan desain UI/UX visual yang presisi dan estetis.</p></div>
+            </li>
+            <li>
+              <span class="step-no">04</span>
+              <div><h4>DEVELOP</h4><p>Penulisan kode bersih berbasis Laravel, Mobile Expo, atau sistem IoT.</p></div>
+            </li>
+            <li>
+              <span class="step-no">05</span>
+              <div><h4>DELIVER</h4><p>Pengujian fitur, evaluasi performa, dan peluncuran produk akhir.</p></div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="quote-box">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <div class="quote-body">
+            <p class="quote-text">Not merely following the times, but helping shape the course of what lies ahead.</p>
+            <div class="signature">Wahyu Saofi</div>
+          </div>
+          <div class="quote-foot">
+            <div class="quote-label">MARI MERANGKAI KEMUNGKINAN</div>
+            <div class="quote-cta">LET'S SHAPE POSSIBILITIES AND CREATE SOMETHING MEANINGFUL TOGETHER.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAK ===================== -->
+    <section class="section" id="kontak">
+      <div class="contact-box" data-animate data-distance="60" data-stagger="160">
+        <div class="contact-left">
+          <div>
+            <span class="kicker">04 / Kontak</span>
+            <h2 class="contact-title">LET'S WORK TOGETHER<span>.</span></h2>
+            <p class="contact-sub">Mari terhubung.</p>
+          </div>
+
+          <p class="contact-text">Terbuka untuk diskusi, kolaborasi proyek, dan kesempatan di bidang teknologi. Ganti alamat email contoh di tombol dengan email profesional Anda sebelum portfolio dipublikasikan.</p>
+
+          <div class="freelance"><span class="ping" aria-hidden="true"></span> Terbuka untuk freelance</div>
+
+          <ul class="contact-list">
+            <li><span class="ci"><svg class="ic"><use href="#i-mail"/></svg></span><a href="mailto:wahyusaofi4@gmail.com">wahyusaofi4@gmail.com</a></li>
+            <li><span class="ci"><svg class="ic"><use href="#i-phone"/></svg></span><span>+62 878-8508-2160</span></li>
+            <li><span class="ci"><svg class="ic"><use href="#i-pin"/></svg></span><span>Lombok Timur, NTB, Indonesia</span></li>
+          </ul>
+
+          <div class="contact-actions">
+            <button type="button" class="btn btn-primary" onclick="copyEmail('wahyusaofi4@gmail.com')">
+              <svg class="ic"><use href="#i-copy"/></svg>
+              <span id="copy-btn-text">SALIN ALAMAT EMAIL</span>
+            </button>
+            <a class="btn btn-outline" href="mailto:wahyusaofi4@gmail.com"><span>Kirim email</span><svg class="ic"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <!-- Tumpukan kartu proyek (CardSwap) -->
+          <div class="swap-area" id="cardSwap" role="group" aria-label="Galeri proyek"></div>
+          <div class="tagline">
+            <div class="tagline-title">WE DESIGN DIGITAL EXPERIENCES</div>
+            <p class="tagline-sub">// WAHYU SAOFI PORTFOLIO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" data-animate="self" data-distance="30">
+    <div class="footer-inner">
+      <div>© <span id="year">2026</span> Wahyu Saofi</div>
+      <div>Dirancang sebagai portfolio personal.</div>
+      <a href="#home"><span>KEMBALI KE ATAS</span><svg class="ic"><use href="#i-arrow-up"/></svg></a>
+    </div>
+  </footer>
+
+  <!-- Lanyard 3D: lapisan layar penuh, kartu bisa ditarik ke mana saja -->
+  <div class="lanyard-global" id="lanyard"></div>
+
+  <!-- Notifikasi -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <div class="toast-inner">
+      <svg class="ic"><use href="#i-check"/></svg>
+      <span id="toast-message">Alamat email telah disalin!</span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Hitung naik pada statistik (nilai akhir sudah tertulis di HTML)
+    (function () {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) return;
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target, end = parseInt(el.getAttribute("data-count"), 10), t0 = null;
+          function tick(t) {
+            if (t0 === null) t0 = t;
+            var p = Math.min((t - t0) / 1200, 1);
+            el.textContent = pad(Math.round(end * (1 - Math.pow(1 - p, 3))));
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.6 });
+      document.querySelectorAll("[data-count]").forEach(function (c) { io.observe(c); });
+    })();
+
+    // Salin email + notifikasi
+    function copyEmail(emailText) {
+      function done() {
+        var toast = document.getElementById("toast");
+        var btnText = document.getElementById("copy-btn-text");
+        btnText.textContent = "BERHASIL DISALIN!";
+        toast.classList.add("show");
+        setTimeout(function () {
+          toast.classList.remove("show");
+          btnText.textContent = "SALIN ALAMAT EMAIL";
+        }, 3000);
+      }
+      function fallback() {
+        var el = document.createElement("textarea");
+        el.value = emailText;
+        el.setAttribute("readonly", "");
+        el.style.position = "fixed";
+        el.style.opacity = "0";
+        document.body.appendChild(el);
+        el.select();
+        try { document.execCommand("copy"); } catch (err) {}
+        document.body.removeChild(el);
+        done();
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(emailText).then(done, fallback);
+      } else {
+        fallback();
+      }
+    }
+  </script>
+
+  <!-- Animasi muncul saat di-scroll untuk semua bagian ([data-animate]) -->
+  <script>
+    (() => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) return;   // tampil apa adanya
+
+      // Pengaturan bawaan (mirip props AnimatedContent); bisa diubah per elemen lewat atribut data-*
+      const DEFAULTS = { distance: 100, duration: 800, stagger: 80, delay: 0, from: 'up' };
+      const EASING = 'cubic-bezier(0.215, 0.61, 0.355, 1)';   // power3.out
+      const THRESHOLD = 0.1;                                  // mulai saat masuk 10% dari bawah layar
+
+      const itemsOf = group => {
+        const sel = group.dataset.animate;
+        if (sel === 'self') return [group];
+        return sel ? [...group.querySelectorAll(sel)] : [...group.children];
+      };
+
+      const offset = (from, d) => ({
+        up: `translate3d(0, ${d}px, 0)`,
+        down: `translate3d(0, ${-d}px, 0)`,
+        left: `translate3d(${-d}px, 0, 0)`,
+        right: `translate3d(${d}px, 0, 0)`
+      }[from] || `translate3d(0, ${d}px, 0)`);
+
+      const groups = [...document.querySelectorAll('[data-animate]')];
+      groups.forEach(g => itemsOf(g).forEach(el => { el.style.opacity = '0'; }));
+
+      const play = group => {
+        const d = group.dataset;
+        const cfg = {
+          distance: +(d.distance ?? DEFAULTS.distance),
+          duration: +(d.duration ?? DEFAULTS.duration),
+          stagger: +(d.stagger ?? DEFAULTS.stagger),
+          delay: +(d.delay ?? DEFAULTS.delay),
+          from: d.from || DEFAULTS.from
+        };
+        itemsOf(group).forEach((el, i) => {
+          const anim = el.animate(
+            [
+              { opacity: 0, transform: offset(cfg.from, cfg.distance) },
+              { opacity: 1, transform: 'translate3d(0, 0, 0)' }
+            ],
+            { duration: cfg.duration, delay: cfg.delay + i * cfg.stagger, easing: EASING, fill: 'both' }
+          );
+          const done = () => { el.style.opacity = ''; anim.cancel(); };
+          anim.onfinish = done;
+          anim.oncancel = () => { el.style.opacity = ''; };
+        });
+      };
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          io.unobserve(entry.target);
+          play(entry.target);
+        });
+      }, { rootMargin: `0px 0px -${THRESHOLD * 100}% 0px` });
+
+      groups.forEach(g => io.observe(g));
+    })();
+  </script>
+
+  <script type="module">
+    const swapRoot = document.getElementById('cardSwap');
+
+    if (location.protocol === 'file:') {
+      swapRoot.innerHTML = '<p class="swap-note">Buka lewat server lokal (Live Server) untuk melihat galeri proyek.</p>';
+    } else {
+      import('./card-swap.js').then(({ createCardSwap }) => {
+        createCardSwap(swapRoot, {
+          items: [
+            { title: 'Pemantauan Kecambah IoT', image: 'images/esp32.jpeg', icon: 'i-sprout', tone: 'green', alt: 'Proyek pemantauan kecambah berbasis IoT' },
+            { title: 'Insulin Care', image: 'images/proyek-insulin-care.jpg', icon: 'i-syringe', tone: 'red', alt: 'Proyek aplikasi Insulin Care' },
+            { title: 'Presensi Wajah', image: 'images/Liface.jpg', icon: 'i-id-card', tone: 'blue', alt: 'Proyek presensi pengenalan wajah' },
+            { title: 'Rekam Medis Laravel', image: 'images/proyek-rekam-medis.jpg', icon: 'i-clipboard', tone: 'teal', alt: 'Proyek rekam medis Laravel' },
+            { title: 'MEJO Medical Journey', image: 'images/Mejo.png', icon: 'i-stethoscope', tone: 'violet', alt: 'Proyek MEJO Medical Journey' },
+            { title: 'Penjualan Ikan', image: 'images/proyek-portfolio.jpg', icon: 'i-globe', tone: 'crimson', alt: 'Proyek website portfolio' }
+          ],
+          width: 380,
+          height: 260,
+          cardDistance: 36,
+          verticalDistance: 40,
+          depth: 80,
+          skewAmount: 5,
+          visibleCards: 4,
+          cardRadius: 16,
+          delay: 4200,
+          speed: 1,
+          bounce: 0.35,
+          parallax: 0.5,
+          hoverSpread: 0.12,
+          dim: 0.5,
+          autoplay: true,
+          pauseOnHover: true,
+          draggable: true
+        });
+      }).catch(err => {
+        console.error(err);
+        swapRoot.innerHTML = '<p class="swap-note">Galeri gagal dimuat: ' + (err && err.message ? err.message : err) + '</p>';
+      });
+    }
+  </script>
+
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+
+  <script type="module">
+    const stage = document.getElementById('lanyard');
+
+    if (location.protocol === 'file:') {
+      stage.innerHTML = '<p class="lanyard-note">Buka lewat server lokal (Live Server di VS Code), bukan dengan klik dua kali file.</p>';
+    } else {
+      const W = 1024, H = 1440;
+      const loadImg = src => new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+
+      async function makeFront() {
+        await document.fonts.load('120px Anton').catch(() => {});
+        const c = document.createElement('canvas'); c.width = W; c.height = H;
+        const g = c.getContext('2d');
+        const RED = '#d91b2b', DARK = '#940c19';
+        const STRIP = 300;                 // lebar strip merah kiri
+        const SLOPE = 140;                 // kemiringan banner bawah (px dari kiri ke kanan)
+        const BAN_L = 1025;                // tepi atas banner di sisi kiri
+        const photo = await loadImg('images/WahyuSaofi.png');
+
+        // 1. kertas putih bertekstur
+        const paper = g.createLinearGradient(0, 0, W, H);
+        paper.addColorStop(0, '#ffffff'); paper.addColorStop(0.5, '#f1f1f3'); paper.addColorStop(1, '#fafafa');
+        g.fillStyle = paper; g.fillRect(0, 0, W, H);
+        g.strokeStyle = 'rgba(0,0,0,0.05)'; g.lineWidth = 2;
+        [[360, 330, 560, 300], [700, 120, 980, 170], [380, 760, 520, 720]].forEach(l => {
+          g.beginPath(); g.moveTo(l[0], l[1]); g.lineTo(l[2], l[3]); g.stroke();
+        });
+
+        // 2. foto bayangan abu-abu (besar, di belakang)
+        if (photo) {
+          g.save();
+          g.filter = 'grayscale(1)'; g.globalAlpha = 0.32;
+          const gh = 900, gw = photo.width * (gh / photo.height);
+          g.drawImage(photo, 560 + (W - 560 - gw) / 2 + 70, 190, gw, gh);
+          g.restore();
+          g.filter = 'none'; g.globalAlpha = 1;
+        }
+
+        // 3. strip merah kiri + pola kontur
+        const sg = g.createLinearGradient(0, 0, STRIP, H);
+        sg.addColorStop(0, '#e1202f'); sg.addColorStop(1, DARK);
+        g.fillStyle = sg; g.fillRect(0, 0, STRIP, H);
+        g.save();
+        g.beginPath(); g.rect(0, 0, STRIP, H); g.clip();
+        g.strokeStyle = 'rgba(255,255,255,0.13)'; g.lineWidth = 3;
+        for (let k = 0; k < 14; k++) {
+          g.beginPath();
+          for (let a = 0; a <= 360; a += 4) {
+            const r = 40 + k * 34, t = a * Math.PI / 180;
+            const x = 150 + Math.cos(t) * (r + Math.sin(t * 3 + k) * 14);
+            const y = 560 + Math.sin(t) * (r * 1.7 + Math.cos(t * 2 + k) * 18);
+            a === 0 ? g.moveTo(x, y) : g.lineTo(x, y);
+          }
+          g.closePath(); g.stroke();
+        }
+        g.restore();
+        g.fillStyle = '#ffffff'; g.fillRect(STRIP, 0, 14, H);     // garis putih tepi strip
+
+        // 4. teks vertikal pada strip
+        g.save();
+        g.translate(STRIP / 2 + 6, 1000); g.rotate(-Math.PI / 2);
+        let fs = 230; g.font = fs + 'px Anton, Impact, sans-serif';
+        const label = 'LULUSAN TI';
+        const lw = g.measureText(label).width;
+        if (lw > 940) { fs = fs * 940 / lw; g.font = fs + 'px Anton, Impact, sans-serif'; }
+        g.fillStyle = '#ffffff'; g.textBaseline = 'middle'; g.textAlign = 'left';
+        g.shadowColor = 'rgba(0,0,0,0.35)'; g.shadowBlur = 14; g.shadowOffsetY = 6;
+        g.fillText(label, 0, 0);
+        g.restore();
+
+        // 5. titik-titik merah (atas)
+        g.fillStyle = RED;
+        for (let i = 0; i < 4; i++) { g.beginPath(); g.arc(340, 48 + i * 34, 10, 0, Math.PI * 2); g.fill(); }
+
+        // 6. pil outline kanan atas
+        g.lineWidth = 6; g.strokeStyle = RED; g.fillStyle = '#ffffff';
+        const rr = (x, y, w, h, r) => { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); };
+        rr(660, 56, 330, 86, 43); g.fill(); g.stroke();
+        g.fillStyle = '#070708'; g.font = '56px Anton, Impact, sans-serif'; g.textBaseline = 'middle'; g.textAlign = 'left';
+        g.fillText('WS', 706, 101);
+        g.fillStyle = RED; g.fillText('.', 770, 101);
+        g.fillStyle = '#070708'; g.font = '700 22px monospace';
+        g.fillText('IT DEVELOPER', 800, 90); g.fillText('UI/UX CREATOR', 800, 116);
+
+        // 7. chevron outline kanan tengah
+        const chevrons = (x, y, n, w, h, gap, lw, col) => {
+          g.strokeStyle = col; g.lineWidth = lw; g.lineJoin = 'miter';
+          for (let i = 0; i < n; i++) {
+            const cx = x + i * gap;
+            g.beginPath(); g.moveTo(cx, y); g.lineTo(cx + w, y + h / 2); g.lineTo(cx, y + h); g.stroke();
+          }
+        };
+        chevrons(770, 520, 7, 24, 50, 34, 4, RED);
+
+        // 8. foto utama (cutout), menempel di dasar
+        if (photo) {
+          const bx = STRIP - 70, bw = W - bx, bt = 200, bb = BAN_L + SLOPE * 0.55 + 40;
+          const bh = bb - bt;
+          const sc = Math.min(bw / photo.width, bh / photo.height), w = photo.width * sc, h = photo.height * sc;
+          g.shadowColor = 'rgba(0,0,0,0.35)'; g.shadowBlur = 30; g.shadowOffsetY = 10;
+          g.drawImage(photo, bx + (bw - w) / 2 + 40, bb - h, w, h);
+          g.shadowColor = 'transparent'; g.shadowBlur = 0; g.shadowOffsetY = 0;
+        }
+
+        // 9. banner merah miring di bawah
+        g.fillStyle = '#ffffff';
+        g.beginPath(); g.moveTo(0, BAN_L - 16); g.lineTo(W, BAN_L + SLOPE - 16); g.lineTo(W, H); g.lineTo(0, H); g.closePath(); g.fill();
+        const bg = g.createLinearGradient(0, BAN_L, W, H);
+        bg.addColorStop(0, '#e1202f'); bg.addColorStop(1, DARK);
+        g.fillStyle = bg;
+        g.beginPath(); g.moveTo(0, BAN_L); g.lineTo(W, BAN_L + SLOPE); g.lineTo(W, H); g.lineTo(0, H); g.closePath(); g.fill();
+        // pola heksagon halus
+        g.save(); g.clip();
+        g.strokeStyle = 'rgba(255,255,255,0.08)'; g.lineWidth = 2;
+        for (let y = BAN_L - 40; y < H + 60; y += 56) for (let x = -40; x < W + 60; x += 97) {
+          const o = (Math.round((y - BAN_L) / 56) % 2) * 48;
+          g.beginPath();
+          for (let k = 0; k < 6; k++) { const t = Math.PI / 3 * k + Math.PI / 6; const px = x + o + Math.cos(t) * 32, py = y + Math.sin(t) * 32; k ? g.lineTo(px, py) : g.moveTo(px, py); }
+          g.closePath(); g.stroke();
+        }
+        g.restore();
+
+        // teks nama mengikuti kemiringan banner
+        g.save();
+        g.translate(0, BAN_L); g.rotate(Math.atan2(SLOPE, W));
+        g.textBaseline = 'alphabetic'; g.textAlign = 'left';
+        let nf = 170; g.font = nf + 'px Anton, Impact, sans-serif';
+        const nw = g.measureText('WAHYU SAOFI').width;
+        if (nw > 900) { nf = nf * 900 / nw; g.font = nf + 'px Anton, Impact, sans-serif'; }
+        g.fillStyle = '#ffffff'; g.shadowColor = 'rgba(0,0,0,0.4)'; g.shadowBlur = 12; g.shadowOffsetY = 5;
+        g.fillText('WAHYU SAOFI', 44, 150);
+        g.shadowColor = 'transparent'; g.shadowBlur = 0; g.shadowOffsetY = 0;
+        g.strokeStyle = 'rgba(255,255,255,0.85)'; g.lineWidth = 3;
+        g.beginPath(); g.moveTo(90, 182); g.lineTo(840, 182); g.stroke();
+        g.fillStyle = '#ffffff'; g.font = '700 34px monospace';
+        g.fillText('IT DEVELOPER & UI/UX CREATOR', 110, 232);
+        g.restore();
+
+        // chevron solid kiri bawah
+        g.save(); g.fillStyle = '#ffffff';
+        for (let i = 0; i < 6; i++) {
+          const x = 44 + i * 22, y = 1360;
+          g.beginPath(); g.moveTo(x, y); g.lineTo(x + 14, y); g.lineTo(x + 30, y + 22); g.lineTo(x + 14, y + 44); g.lineTo(x, y + 44); g.lineTo(x + 16, y + 22); g.closePath(); g.fill();
+        }
+        g.restore();
+
+        return c.toDataURL('image/png');
+      }
+
+
+      // Motif tali: strip horizontal 1024x192 yang diulang sepanjang tali
+      const FLIP_MOTIF = false;   // ubah ke true kalau teks tali ingin dibaca dari bawah ke atas
+      async function makeStrap() {
+        await document.fonts.load('80px Anton').catch(() => {});
+        const TW = 1024, TH = 192;
+        const RED = '#d91b2b', DARK = '#940c19';
+        const c = document.createElement('canvas'); c.width = TW; c.height = TH;
+        const g = c.getContext('2d');
+
+        // dasar merah senada strip kartu (gradasi halus)
+        const bg = g.createLinearGradient(0, 0, 0, TH);
+        bg.addColorStop(0, '#e1202f'); bg.addColorStop(0.5, RED); bg.addColorStop(1, DARK);
+        g.fillStyle = bg; g.fillRect(0, 0, TW, TH);
+
+        // pola kontur halus seperti strip kartu
+        g.strokeStyle = 'rgba(255,255,255,0.10)'; g.lineWidth = 3;
+        for (let k = 0; k < 5; k++) {
+          g.beginPath();
+          for (let a = 0; a <= 360; a += 4) {
+            const t = a * Math.PI / 180, r = 40 + k * 22;
+            const x = TW / 2 + Math.cos(t) * (r * 4.2 + Math.sin(t * 3 + k) * 20);
+            const y = TH / 2 + Math.sin(t) * (r * 0.9 + Math.cos(t * 2 + k) * 6);
+            a === 0 ? g.moveTo(x, y) : g.lineTo(x, y);
+          }
+          g.closePath(); g.stroke();
+        }
+
+        // garis tepi hitam + garis putih tipis (warna kartu: merah, putih, hitam)
+        g.fillStyle = '#070708'; g.fillRect(0, 0, TW, 16); g.fillRect(0, TH - 16, TW, 16);
+        g.fillStyle = '#ffffff'; g.fillRect(0, 20, TW, 4); g.fillRect(0, TH - 24, TW, 4);
+
+        // jahitan putus-putus
+        g.strokeStyle = 'rgba(255,255,255,0.4)'; g.lineWidth = 3; g.setLineDash([14, 12]);
+        g.beginPath(); g.moveTo(0, 38); g.lineTo(TW, 38); g.moveTo(0, TH - 38); g.lineTo(TW, TH - 38); g.stroke();
+        g.setLineDash([]);
+
+        // teks berulang: pas satu tile agar sambungannya mulus
+        const parts = [['WAHYU SAOFI', '#ffffff'], ['chev', '#ffffff'], ['IT DEVELOPER', '#070708'], ['chev', '#ffffff']];
+        const gap = 34, chevW = 70;
+        g.font = '80px Anton, Impact, sans-serif';
+        const widths = parts.map(p => p[0] === 'chev' ? chevW : g.measureText(p[0]).width);
+        const total = widths.reduce((a, b) => a + b, 0) + gap * parts.length;
+        const k = Math.min(1.35, TW / total);
+        g.font = (80 * k) + 'px Anton, Impact, sans-serif';
+        g.textBaseline = 'middle';
+        let x = (TW - (widths.reduce((a, b) => a + b, 0) * k + gap * k * parts.length)) / 2 + (gap * k) / 2;
+        parts.forEach((p, i) => {
+          if (p[0] === 'chev') {
+            // chevron ganda seperti hiasan di kartu
+            g.fillStyle = p[1];
+            for (let j = 0; j < 3; j++) {
+              const cx = x + j * 20 * k, cy = TH / 2 - 22 * k;
+              g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + 9 * k, cy); g.lineTo(cx + 24 * k, cy + 22 * k);
+              g.lineTo(cx + 9 * k, cy + 44 * k); g.lineTo(cx, cy + 44 * k); g.lineTo(cx + 15 * k, cy + 22 * k); g.closePath(); g.fill();
+            }
+          } else {
+            g.fillStyle = p[1];
+            g.fillText(p[0], x, TH / 2 + 4);
+          }
+          x += widths[i] * k + gap * k;
+        });
+
+        if (!FLIP_MOTIF) return c.toDataURL('image/png');
+        const f = document.createElement('canvas'); f.width = TW; f.height = TH;
+        const fg = f.getContext('2d');
+        fg.translate(TW, TH); fg.rotate(Math.PI);
+        fg.drawImage(c, 0, 0);
+        return f.toDataURL('image/png');
+      }
+
+      Promise.all([makeFront(), makeStrap()]).then(async ([front, strap]) => {
+        const { createLanyard } = await import('./lanyard.js');
+
+        // posisi & ukuran kartu mengikuti panel "Rekap Karya"
+        const calc = () => {
+          const photo = document.querySelector('.showcase-photo').getBoundingClientRect();
+          const side = document.querySelector('.hero-side').getBoundingClientRect();
+          const cardPx = Math.min(photo.height * 0.92, 420);
+          return {
+            anchorX: (side.left + side.width / 2) / window.innerWidth,
+            cardTop: photo.top + window.scrollY + photo.height * 0.06 - 18,   // makin kecil = kartu makin ke atas
+            size: cardPx / window.innerHeight
+          };
+        };
+
+        const lanyard = createLanyard(stage, {
+          frontImage: front, imageFit: 'cover', cardColor: '#ffffff', orientation: 'portrait',
+          finish: 'glossy', cornerRadius: 0.3, strapImage: strap, strapColor: '#d91b2b', strapWidth: 0.7, metal: 'silver',
+          gravity: 1, damping: 0.5, elasticity: 0.5, breeze: 0.3, interactive: true, intro: true,
+          global: true, anchorTop: -12, ...calc()
+        });
+
+        const place = () => { lanyard.update(calc()); lanyard.setScroll(window.scrollY); };
+        let tick = 0;
+        const later = () => { cancelAnimationFrame(tick); tick = requestAnimationFrame(place); };
+        window.addEventListener('resize', later);
+        window.addEventListener('load', later);
+        window.addEventListener('scroll', () => lanyard.setScroll(window.scrollY), { passive: true });
+        lanyard.setScroll(window.scrollY);
+      }).catch(err => {
+        console.error(err);
+        stage.innerHTML = '<p class="lanyard-note">Lanyard gagal dimuat: ' + (err && err.message ? err.message : err) + '</p>';
+      });
+    }
+  </script>
+</body>
+</html>
